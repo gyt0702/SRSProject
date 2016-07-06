@@ -64,7 +64,7 @@ public class CourseService {
 			courseCatalog.addCourse(c);
 			jo.put("warning", "添加成功！");
 		} else {
-			jo.put("warning", "添加失败：已有相同的课程或课程ID重复！");
+			jo.put("warning", "添加失败：已有相同的课程！");
 		}
 		return jo.toString();
 	}

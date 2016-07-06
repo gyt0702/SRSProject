@@ -10,26 +10,20 @@ import javax.servlet.http.HttpServletResponse;
 
 import service.CourseService;
 
-/**
- * Servlet implementation class DeleteCourses
- */
+
 @WebServlet("/DeleteCourses")
 public class DeleteCourses extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
+    
     public DeleteCourses() {
         super();
-        // TODO Auto-generated constructor stub
+        
     }
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
+	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+	
 		response.setContentType("text/html;charset=utf-8");
 		request.setCharacterEncoding("utf-8");
 
@@ -41,14 +35,11 @@ public class DeleteCourses extends HttpServlet {
 			cs.deleteCourse(courseNo);
 		}
 
-		response.sendRedirect("CourseIndex.html");
+		response.sendRedirect("CourseList.html");
 	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
+	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
 		doGet(request, response);
 	}
 

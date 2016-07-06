@@ -121,8 +121,7 @@ public class CourseImpl implements CourseDao {
 			stmt.close();
 			conn.close();
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			System.out.println("����γ��쳣��" + e.getMessage());
+			System.out.println("aa" + e.getMessage());
 		}
 		addPrerequisite(courseNo, preCourseNo);
 	}
@@ -137,8 +136,8 @@ public class CourseImpl implements CourseDao {
 			stmt.close();
 			conn.close();
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			System.out.println("����γ��쳣��" + e.getMessage());
+			
+			System.out.println("aa" + e.getMessage());
 		}
 	}
 
@@ -154,7 +153,7 @@ public class CourseImpl implements CourseDao {
 			conn.close();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
-			System.out.println("未选择先修课程 " + e.getMessage());
+			System.out.println("失败 " + e.getMessage());
 		}
 	}
 

@@ -140,7 +140,7 @@ public class ProfessorImpl implements ProfessorDao {
 			stmt.close();
 			conn.close();
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
+			
 			System.out.println("失败" + e.getMessage());
 		}
 	}
@@ -157,7 +157,6 @@ public class ProfessorImpl implements ProfessorDao {
 			stmt.close();
 			conn.close();
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			System.out.println("失败" + e.getMessage());
 		}
 	}

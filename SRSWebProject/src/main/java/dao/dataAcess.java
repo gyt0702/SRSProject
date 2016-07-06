@@ -13,7 +13,6 @@ public class dataAcess {
 			Object o = Class.forName(daoName + "." + "CourseImpl").newInstance();
 			result = (CourseDao) o;
 		} catch (InstantiationException | IllegalAccessException | ClassNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return result;
@@ -25,7 +24,6 @@ public class dataAcess {
 			Object o = Class.forName(daoName + "." + "CourseCatalogImpl").newInstance();
 			result = (CourseCatalogDao) o;
 		} catch (InstantiationException | IllegalAccessException | ClassNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return result;
@@ -37,19 +35,17 @@ public class dataAcess {
 			Object o = Class.forName(daoName + "." + "StudentImpl").newInstance();
 			result = (StudentDao) o;
 		} catch (InstantiationException | IllegalAccessException | ClassNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return result;
 	}
 
-	public static StudentWithPasswordDao createStudentWithPasswordDao() {
-		StudentWithPasswordDao result = null;
+	public static StuPasswordDao createStuPasswordDao() {
+		StuPasswordDao result = null;
 		try {
-			Object o = Class.forName(daoName + "." + "StudentWithPasswordImpl").newInstance();
-			result = (StudentWithPasswordDao) o;
+			Object o = Class.forName(daoName + "." + "StuPasswordImpl").newInstance();
+			result = (StuPasswordDao) o;
 		} catch (InstantiationException | IllegalAccessException | ClassNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return result;
@@ -61,7 +57,6 @@ public class dataAcess {
 			Object o = Class.forName(daoName + "." + "ProfessorImpl").newInstance();
 			result = (ProfessorDao) o;
 		} catch (InstantiationException | IllegalAccessException | ClassNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return result;
@@ -73,19 +68,17 @@ public class dataAcess {
 			Object o = Class.forName(daoName + "." + "FacultyImpl").newInstance();
 			result = (FacultyDao) o;
 		} catch (InstantiationException | IllegalAccessException | ClassNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return result;
 	}
 
-	public static ProfessorWithPasswordDao createProfessorWithPasswordDao() {
+	public static ProPasswordDao createProPasswordDao() {
 		ProfessorWithPasswordDao result = null;
 		try {
-			Object o = Class.forName(daoName + "." + "ProfessorWithPasswordImpl").newInstance();
-			result = (ProfessorWithPasswordDao) o;
+			Object o = Class.forName(daoName + "." + "ProPasswordImpl").newInstance();
+			result = (ProPasswordDao) o;
 		} catch (InstantiationException | IllegalAccessException | ClassNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return result;
@@ -97,7 +90,6 @@ public class dataAcess {
 			Object o = Class.forName(daoName + "." + "ScheduleOfClassesImpl").newInstance();
 			result = (ScheduleOfClassesDao) o;
 		} catch (InstantiationException | IllegalAccessException | ClassNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return result;
@@ -109,7 +101,6 @@ public class dataAcess {
 			Object o = Class.forName(daoName + "." + "SectionImpl").newInstance();
 			result = (SectionDao) o;
 		} catch (InstantiationException | IllegalAccessException | ClassNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return result;
@@ -121,7 +112,6 @@ public class dataAcess {
 			Object o = Class.forName(daoName + "." + "TranscriptImpl").newInstance();
 			result = (TranscriptDao) o;
 		} catch (InstantiationException | IllegalAccessException | ClassNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return result;
@@ -133,7 +123,6 @@ public class dataAcess {
 			Object o = Class.forName(daoName + "." + "TranscriptEntryImpl").newInstance();
 			result = (TranscriptEntryDao) o;
 		} catch (InstantiationException | IllegalAccessException | ClassNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return result;

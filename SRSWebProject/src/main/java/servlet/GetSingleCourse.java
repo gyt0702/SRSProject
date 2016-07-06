@@ -11,26 +11,19 @@ import javax.servlet.http.HttpServletResponse;
 
 import service.CourseService;
 
-/**
- * Servlet implementation class GetSingleCourse
- */
+
 @WebServlet("/GetSingleCourse")
 public class GetSingleCourse extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
+    
     public GetSingleCourse() {
         super();
-        // TODO Auto-generated constructor stub
+      
     }
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
+	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
 		response.setContentType("text/json");
 		response.setCharacterEncoding("UTF-8");
 		request.setCharacterEncoding("utf-8");
@@ -41,11 +34,8 @@ public class GetSingleCourse extends HttpServlet {
 		out.print(cs.getCourseJSON(courseNo));
 	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
+	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
 		doGet(request, response);
 	}
 

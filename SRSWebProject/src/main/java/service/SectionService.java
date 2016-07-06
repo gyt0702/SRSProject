@@ -79,7 +79,7 @@ public class SectionService {
 		EnrollmentStatus result = section.enroll(student);
 		jo.put("result", result.toString());
 		if(result.toString().equals("prereq")){
-			jo.put("warning", result.value()+"("+course.getPrerequisites().get(0).getCourseName()+")锛�");
+			jo.put("warning", result.value()+"("+course.getPrerequisites().get(0).getCourseName()+")aa");
 		}else if(result.toString().equals("success")){
 			sd.addEnrolledSection(student, sectionNo);
 			jo.put("warning", result.value());

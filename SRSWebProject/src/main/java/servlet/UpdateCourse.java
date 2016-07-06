@@ -11,26 +11,20 @@ import javax.servlet.http.HttpServletResponse;
 import model.Course;
 import service.CourseService;
 
-/**
- * Servlet implementation class EditCourse
- */
-@WebServlet("/EditCourse")
-public class EditCourse extends HttpServlet {
+
+@WebServlet("/UpdateCourse")
+public class UpdateCourse extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public EditCourse() {
+    
+    public UpdateCourse() {
         super();
-        // TODO Auto-generated constructor stub
+        
     }
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
+	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+		
 		response.setContentType("text/html;charset=utf-8");
 		request.setCharacterEncoding("utf-8");
 		
@@ -39,14 +33,12 @@ public class EditCourse extends HttpServlet {
 		
 		String preCourseNo=request.getParameter("prerequisite");
 		cs.updateCourse(c,preCourseNo);
-		response.sendRedirect("CourseIndex.html");
+		response.sendRedirect("CourseList.html");
 	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
+	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+		
 		doGet(request, response);
 	}
 

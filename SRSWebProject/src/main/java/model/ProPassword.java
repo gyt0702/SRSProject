@@ -1,19 +1,19 @@
 package model;
 
-public class ProfessorWithPassword extends Professor {
+public class ProPassword extends Professor {
 	private String password;
 
-	public ProfessorWithPassword(String name, String ssn, String major, String degree, String password) {
+	public ProPassword(String name, String ssn, String major, String degree, String password) {
 		super(name, ssn, major, degree);
 		this.setPassword(password);
 	}
 
-	public ProfessorWithPassword(Professor professor, String password) {
+	public ProPassword(Professor professor, String password) {
 		super(professor.getName(), professor.getSsn(), professor.getTitle(), professor.getDepartment());
 		this.setPassword(password);
 	}
 
-	public ProfessorWithPassword() {
+	public ProPassword() {
 	}
 
 	public void setPassword(String password) {

@@ -6,15 +6,15 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-import dao.StudentWithPasswordDao;
+import dao.StuPasswordDao;
 import model.Student;
-import model.StudentWithPassword;
+import model.StuPassword;
 import util.DBUtil;
 
-public class StudentWithPasswordImpl implements StudentWithPasswordDao {
+public class StuPasswordImpl implements StuPasswordDao {
 	@Override
-	public StudentWithPassword getStudentWithPassword(String Sssn) {
-		StudentWithPassword sp = new StudentWithPassword();
+	public StuPassword getStuPassword(String Sssn) {
+		StuPassword sp = new StuPassword();
 		Connection Conn = DBUtil.getSqliteConnection();
 		String sql = "select * from Student where Sssn='" + Sssn + "'";
 		try {
@@ -23,7 +23,7 @@ public class StudentWithPasswordImpl implements StudentWithPasswordDao {
 			String pwd = rs.getString("password");
 			Student student = new Student(rs.getString("studentName"), Sssn, rs.getString("major"),
 			rs.getString("degree"));
-			sp = new StudentWithPassword(student, pwd);
+			sp = new StuPassword(student, pwd);
 			pstmt.close();
 			Conn.close();
 		} catch (Exception e) {
